@@ -47,6 +47,23 @@ class RedPage extends StatelessWidget {
                 },
                 child: Text("Ana Sayfaya Geri Dön"),
               ),
+
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green.shade200,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(),
+                ),
+                onPressed: () {
+                  if (Navigator.canPop(context)) {
+                    Navigator.of(context).pop();
+                  } else {
+                    Navigator.of(context).maybePop();
+                  }
+                },
+                child: Text("CanPop"),
+              ),
             ],
           ),
         ),

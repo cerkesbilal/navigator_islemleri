@@ -64,6 +64,35 @@ class _NavigatorKullanimiState extends State<NavigatorKullanimi> {
               onPressed: () {},
               child: Text("Sonraki buton"),
             ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green.shade200,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(),
+              ),
+              onPressed: () {
+                Navigator.of(context).maybePop();
+              },
+              child: Text("MaybePop"),
+            ),
+
+            SizedBox(height: 10),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green.shade200,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(),
+              ),
+              onPressed: () {
+                if (Navigator.canPop(context)) {
+                  Navigator.of(context).pop();
+                } else {
+                  Navigator.of(context).maybePop();
+                }
+              },
+              child: Text("CanPop"),
+            ),
           ],
         ),
       ),
@@ -87,6 +116,8 @@ Yeni Adı: PopScope
           print("didpop false çalıştı");
           canpop false ise burası çalışır. direk false değeri gönderir. Sayfa pop yapamaz mesela burada daha kayıt tamamlanmadı nereye gidiyorsun diyebiliriz. 
         }
+
+        MaybePop: Butonun bulunduğu sayfa öncesinde başka sayfa yoksa bu kullanılır. Siyah ekran göstermek yerine o sayfada kalır. 
 
 
 
