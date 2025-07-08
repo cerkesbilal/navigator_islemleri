@@ -117,7 +117,9 @@ Yeni Adı: PopScope
           canpop false ise burası çalışır. direk false değeri gönderir. Sayfa pop yapamaz mesela burada daha kayıt tamamlanmadı nereye gidiyorsun diyebiliriz. 
         }
 
-        MaybePop: Butonun bulunduğu sayfa öncesinde başka sayfa yoksa bu kullanılır. Siyah ekran göstermek yerine o sayfada kalır. 
+        MaybePop: Butonun bulunduğu sayfa öncesinde başka sayfa yoksa bu kullanılır. Siyah ekran göstermek yerine o sayfada kalır.
+
+        canPop: Sayfa geçişinde arkada sayfa varsa geri pop et yoksa aynen kal kontrolünü yapabilir. 
 
 
 
