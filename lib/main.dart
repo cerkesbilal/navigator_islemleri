@@ -70,3 +70,24 @@ class _NavigatorKullanimiState extends State<NavigatorKullanimi> {
     );
   }
 }
+
+/*
+Eski Adı: WillPopScope 
+Yeni Adı: PopScope 
+
+-Eğer kullanıcı telindeki geri butonu ya da appbar da ki geri butonu basarak geri geliyorsa bunu kontrol etmek için kullanılır. 
+
+-Bu yapı Scaffold u sarmalar. PopScope() ile. Biz bu yapıyı kontrol etmek istiyorsan canPop parametresini kullanmak zorundayız.
+-canPop false ise geri butonu tıklanamaz hala gelir. Ama hala tıklanma etkileşimini alabiliriz.
+
+- if (didPop) {
+          print("didpop true çalıştı");
+          Canpop true ise burası çalışır. Burası pop işlemi olduğu zaman çalışır yani ya canpop true olacak ya da aşağıdaki butona tıklandığında pop işlemi varsa çalışır
+        } else {
+          print("didpop false çalıştı");
+          canpop false ise burası çalışır. direk false değeri gönderir. Sayfa pop yapamaz mesela burada daha kayıt tamamlanmadı nereye gidiyorsun diyebiliriz. 
+        }
+
+
+
+*/
